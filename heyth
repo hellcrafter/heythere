@@ -1,0 +1,46 @@
+//netsh wlan show profile name= “Wi-Fi name” key=clear
+//wmic path SoftwareLicensingService get OA3xOriginalProductKey
+//powershell "(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey"
+//open notepad
+//@echo off
+//:crash
+//start
+//goto crash
+//Save name with .bat
+import javafx.application.Application; 
+import javafx.scene.Scene; 
+import javafx.scene.control.*; 
+import javafx.scene.layout.*; 
+import javafx.stage.Stage; 
+import javafx.event.ActionEvent; 
+import javafx.event.EventHandler; 
+import javafx.scene.canvas.*; 
+import javafx.scene.web.*; 
+import javafx.scene.Group; 
+
+public class webview_2 extends Application { 
+
+	public void start(Stage stage) 
+	{ 
+		try { 
+			stage.setTitle("creating Webview"); 
+			WebView w = new WebView(); 
+			WebEngine e = w.getEngine(); 
+			e.load("https://www.geeksforgeeks.org"); 
+			w.setFontScale(1.5f); 
+			w.setZoom(0.8); 
+			Scene scene = new Scene(w, w.getPrefWidth(),w.getPrefHeight()); 
+			stage.setScene(scene); 
+			stage.show(); 
+		} 
+
+		catch (Exception e) { 
+			System.out.println(e.getMessage()); 
+		} 
+	} 
+
+	public static void main(String args[]) 
+	{ 
+		launch(args); 
+	} 
+} 
